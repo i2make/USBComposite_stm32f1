@@ -196,7 +196,7 @@ public:
     virtual void handleReset(void);
     virtual void handleSysExData(unsigned char data);
     virtual void handleSysExEnd(void);
-
+    virtual void handleQuarterFrame(unsigned int data);
 };
 
 extern const uint32 midiNoteFrequency_10ths[128];
