@@ -211,7 +211,7 @@ void USBMIDI::dispatchPacket(uint32 p)
                      handleSongSelect(e.p.midi1);
                      break;
                  case MIDIv1_MTC_QUARTER_FRAME:
-                     // reference library doesnt handle quarter frame.
+                     handleQuarterFrame(e.p.midi1);
                      break;
              }
             break;
@@ -560,4 +560,5 @@ void USBMIDI::handleActiveSense(void) {}
 void USBMIDI::handleReset(void) {}
 void USBMIDI::handleSysExData(unsigned char) {}
 void USBMIDI::handleSysExEnd(void) {}
+void USBMIDI::handleQuarterFrame(unsigned int data) {}
 #pragma GCC diagnostic pop
